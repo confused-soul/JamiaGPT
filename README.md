@@ -4,12 +4,11 @@ JamiaGPT is a web-based chat application powered by AI, designed to provide info
 [🔗JamiaGPT](https://jamiagpt.streamlit.app/)
 
 ## Screenshots
-[screenshot1](src/images/JamiaGPT(1).png?raw=true)
-Screenshot(1)
 
-[screenshot2](src/images/JamiaGPT(2).png?raw=true)
-Screenshot(2)
-
+<p align="center">
+  <img src="src/images/JamiaGPT(1).png" width="350" title="Screenshot(1)" alt="[screenshot1](src/images/JamiaGPT(1).png?raw=true)">
+  <img src="src/images/JamiaGPT(2).png" width="350" title="Screenshot(2)" alt="[screenshot2](src/images/JamiaGPT(2).png?raw=true)">
+</p>
 
 ## Features
 
