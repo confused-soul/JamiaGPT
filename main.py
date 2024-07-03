@@ -65,7 +65,7 @@ def process_chat(chain, question, chat_history):
 vectorStore = create_db()
 chain = create_chain(vectorStore)
 
-st.set_page_config(page_title="JamiaGPT", page_icon="src\images\icon.jpg")
+st.set_page_config(page_title="JamiaGPT", page_icon="src/images/icon.jpg")
 
 st.markdown('''
 <style>
@@ -76,7 +76,7 @@ st.markdown('''
 
 col1, mid, col2 = st.columns([1,1,20])
 with col1:
-    st.image(image="src\images\logo.png", width=60)
+    st.image(image="src/images/logo.png", width=60)
 with col2:
     st.title(":green[JamiaGPT]")
 
