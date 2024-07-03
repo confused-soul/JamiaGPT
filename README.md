@@ -20,6 +20,9 @@ JamiaGPT is a web-based chat application powered by AI, designed to provide info
 ## Setup Instructions
 
 1. **Clone the Repository:**
-'''bash
-git clone <repository_url>
+'''
+git clone https://github.com/confused-soul/JamiaGPT.git
 cd JamiaGPT
+'''
+2. **Install Dependencies:**
+  pip install -r requirements.txt
