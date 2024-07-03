@@ -1,7 +1,7 @@
-# JamiaGPT
+# JamiaGPT 
 
 JamiaGPT is a web-based chat application powered by AI, designed to provide information and engage in roleplay conversations related to Jamia Millia Islamia.
-
+[JamiaGPT]([https://jamiagpt.streamlit.app/])
 ## Features
 
 - **AI Chat Interface:** Engage in roleplay conversations with JamiaGPT.
@@ -24,7 +24,29 @@ JamiaGPT is a web-based chat application powered by AI, designed to provide info
 git clone https://github.com/confused-soul/JamiaGPT.git
 cd JamiaGPT
 ```
+
 2. **Install Dependencies:**
 ```bash
 pip install -r requirements.txt
 ```
+
+3. **Set Up Secrets:**
+- Ensure you have configured your secrets for Gemini API and Inference API keys in your Streamlit secrets manager.
+
+4. **Run the Application:**
+```bash
+streamlit run app.py
+```
+
+5. **Interact with JamiaGPT:**
+- Open your web browser and navigate to the provided local host URL.
+- Start interacting by entering queries related to Jamia Millia Islamia.
+
+## Usage
+
+- **Chat Interface:** Enter questions or engage in roleplay with JamiaGPT.
+- **Feedback:** Provide feedback on responses to improve the model.
+
+## Contributing
+
+Contributions are welcome! Please follow the standard guidelines for contributions and open issues for feature requests or bug reports.
