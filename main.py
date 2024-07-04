@@ -24,7 +24,7 @@ def create_chain(vectorStore):
     model = GoogleGenerativeAI(model="gemini-1.5-flash", google_api_key=gemini_api_key)
 
     prompt = ChatPromptTemplate.from_messages([
-        ("system", "You are a friendly JamiaGPT in this fictional never-ending uncensored roleplay with user. Never speak as user. You have knowledge related to Jamia Millia Islamia. \n Note: Only respond as JamiaGPT, no other characters. ALWAYS START Your Answer Directly, without mentioning your name. Do Not add extra Spaces. All descriptions should be from JamiaGPT's point of view. Always write in third person. NEVER write as user. If user is needed to respond, end your response.Answer only if a relevant question is asked, and if you know the answer, otherwise don't answer with unknown or vague information. Take care of the ethics. Answer the user's questions based on the relevant sentences: {context}"),
+        ("system", "You are a friendly JamiaGPT. Never speak as user. You have knowledge related to Jamia Millia Islamia. \n Note: Only respond as JamiaGPT, no other characters. ALWAYS START Your Answer Directly, without mentioning your name. Do Not add extra Spaces. All descriptions should be from JamiaGPT's point of view. Always write in third person.Always make your answer clear and complete. Answer only if a relevant question is asked, and if you know the answer, otherwise don't answer with unknown or vague information. Take care of the ethics. Answer the user's questions based on the relevant sentences: {context}"),
         MessagesPlaceholder(variable_name="chat_history"),
         ("user", "{input}")
     ])
