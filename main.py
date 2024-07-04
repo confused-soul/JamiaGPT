@@ -8,10 +8,9 @@ from langchain.chains.history_aware_retriever import create_history_aware_retrie
 from langchain_core.prompts import ChatPromptTemplate
 from langchain.chains.combine_documents import create_stuff_documents_chain
 import streamlit as st
-from secret import gemini_api_key, huggingface_api as inference_api_key
 
-#gemini_api_key = st.secrets['gemini_api_key']
-#inference_api_key = st.secrets['inference_api_key']
+gemini_api_key = st.secrets['gemini_api_key']
+inference_api_key = st.secrets['inference_api_key']
 
 def create_db():
     embedding = HuggingFaceInferenceAPIEmbeddings(
