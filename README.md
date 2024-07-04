@@ -5,7 +5,7 @@ JamiaGPT is a web-based chat application powered by AI, designed to provide info
 
 ## Video Demonstration
 
-[![Watch the video](https://drive.google.com/file/d/16e5AmNxcG0YbGhvC1xDmoZQNa28K4WhT/view?usp=sharing)](https://drive.google.com/file/d/1m80Bj13fjiuJ9SfgRy6I7E6wrmIyG6UG/view?usp=sharing)
+[![Watch the video](src/images/VideoDemoSS.png)](https://drive.google.com/file/d/1m80Bj13fjiuJ9SfgRy6I7E6wrmIyG6UG/view?usp=sharing)
 
 
 ## Screenshots
