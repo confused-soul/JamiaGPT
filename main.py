@@ -16,7 +16,7 @@ def create_db():
     embedding = HuggingFaceInferenceAPIEmbeddings(
         api_key=inference_api_key, model_name="sentence-transformers/all-MiniLM-l6-v2"
     )
-    vectorStore = FAISS.load_local("faiss_index", embedding, allow_dangerous_deserialization=True)
+    vectorStore = FAISS.load_local("faiss_index2", embedding, allow_dangerous_deserialization=True)
     return vectorStore
 
 def create_chain(vectorStore):
