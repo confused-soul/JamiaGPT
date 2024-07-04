@@ -15,7 +15,7 @@ def create_db():
     embedding = HuggingFaceInferenceAPIEmbeddings(
         api_key=inference_api_key, model_name="sentence-transformers/all-MiniLM-l6-v2"
     )
-    vectorStore = FAISS.load_local("faiss_index2", embedding, allow_dangerous_deserialization=True)
+    vectorStore = FAISS.load_local("faiss_index3", embedding, allow_dangerous_deserialization=True)
     return vectorStore
 
 def create_chain(vectorStore):
@@ -33,23 +33,23 @@ def create_chain(vectorStore):
     )
 
     # Replace retriever with history aware retriever
-    retriever = vectorStore.as_retriever(search_kwargs={"k": 3})
+    retriever = vectorStore.as_retriever(search_kwargs={"k": 5})
 
-    retriever_prompt = ChatPromptTemplate.from_messages([
-        MessagesPlaceholder(variable_name="chat_history"),
-        ("user", "{input}"),
-        ("user", "Given the above chat history, generate a search query to look up in order to get information relevant to the conversation")
-    ])
+    # retriever_prompt = ChatPromptTemplate.from_messages([
+    #     MessagesPlaceholder(variable_name="chat_history"),
+    #     ("user", "{input}"),
+    #     ("user", "Given the above chat history, generate a search query to look up in order to get information relevant to the conversation")
+    # ])
 
-    history_aware_retriever = create_history_aware_retriever(
-        llm=model,
-        retriever=retriever,
-        prompt=retriever_prompt
-    )
+    # history_aware_retriever = create_history_aware_retriever(
+    #     llm=model,
+    #     retriever=retriever,
+    #     prompt=retriever_prompt
+    # )
 
     retrieval_chain = create_retrieval_chain(
         # retriever, Replace with History Aware Retriever
-        history_aware_retriever,
+        retriever,
         chain
     )
 

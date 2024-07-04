@@ -7,6 +7,7 @@ from langchain.chains import create_retrieval_chain
 from langchain.chains.history_aware_retriever import create_history_aware_retriever
 from langchain_core.prompts import ChatPromptTemplate
 from langchain.chains.combine_documents import create_stuff_documents_chain
+# from secret import gemini_api_key, huggingface_api as inference_api_key
 import streamlit as st
 
 gemini_api_key = st.secrets['gemini_api_key']
@@ -16,7 +17,7 @@ def create_db():
     embedding = HuggingFaceInferenceAPIEmbeddings(
         api_key=inference_api_key, model_name="sentence-transformers/all-MiniLM-l6-v2"
     )
-    vectorStore = FAISS.load_local("faiss_index2", embedding, allow_dangerous_deserialization=True)
+    vectorStore = FAISS.load_local("faiss_index3", embedding, allow_dangerous_deserialization=True)
     return vectorStore
 
 def create_chain(vectorStore):
@@ -81,7 +82,7 @@ st.markdown('''
 ''', unsafe_allow_html=True)
 
 disc = st.expander(label=":red[Disclaimer!]")
-disc.write("JamiaGPT is still in Prototype-phase. The model is not perfect and may give irrelevant answers. If you wanna help feel free to reach me out, or put Issues on GitHub!")
+disc.write("JamiaGPT is still in Prototype-phase. The model is not perfect and may give irrelevant answers. I am still working on the Dataset. If you wanna help feel free to reach me out, or put Issues on GitHub!")
 
 USER_AVATAR = "😁"
 BOT_AVATAR = "🤖"
