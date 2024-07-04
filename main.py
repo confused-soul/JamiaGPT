@@ -97,7 +97,7 @@ for message in st.session_state.messages:
         st.markdown(message["content"])
 
 
-if prompt := st.chat_input("What is up?", key="user_input", max_chars = 2000):
+if prompt := st.chat_input("Send a message", key="user_input", max_chars = 2000):
     # Display user message in chat message container
     st.chat_message("user", avatar=USER_AVATAR).markdown(prompt)
     # Add user message to chat history
