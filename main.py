@@ -33,7 +33,7 @@ def create_chain(vectorStore):
         prompt=prompt
     )
 
-    retriever = vectorStore.as_retriever(search_kwargs={"k": 3})
+    retriever = vectorStore.as_retriever(search_kwargs={"k": 5})
 
     retriever_prompt = ChatPromptTemplate.from_messages([
         MessagesPlaceholder(variable_name="chat_history"),
