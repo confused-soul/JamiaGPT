@@ -8,7 +8,7 @@ from langchain_text_splitters import CharacterTextSplitter, RecursiveCharacterTe
 
 loader = TextLoader("JMI.txt", encoding="utf-8")
 documents = loader.load()
-text_splitter = RecursiveCharacterTextSplitter(separators=["\n\n", "\n", ".", " "], chunk_size=500, chunk_overlap=200, length_function=len)
+text_splitter = RecursiveCharacterTextSplitter(separators=["\n\n", "\n", ".", " "], chunk_size=300, chunk_overlap=100, length_function=len)
 docs = text_splitter.split_documents(documents)
 embeddings = HuggingFaceInferenceAPIEmbeddings(
     api_key=inference_api_key, model_name="sentence-transformers/all-MiniLM-l6-v2"
