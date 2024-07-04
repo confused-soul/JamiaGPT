@@ -80,7 +80,7 @@ with col2:
     st.title(":green[JamiaGPT]")
 
 disc = st.expander(label=":red[Disclaimer!]")
-disc.write("This is still under development. The model is not perfect and may give irrelevant answers. Please be patient and ask questions related to Jamia Millia Islamia only.")
+disc.write("JamiaGPT is still in Prototype-phase. The model is not perfect and may give irrelevant answers. If you wanna help feel free to reach me out, or put Issues on GitHub!")
 
 USER_AVATAR = "😁"
 BOT_AVATAR = "🤖"
