@@ -8,9 +8,10 @@ from langchain.chains.history_aware_retriever import create_history_aware_retrie
 from langchain_core.prompts import ChatPromptTemplate
 from langchain.chains.combine_documents import create_stuff_documents_chain
 import streamlit as st
+from secret import gemini_api_key, huggingface_api as inference_api_key
 
-gemini_api_key = st.secrets['gemini_api_key']
-inference_api_key = st.secrets['inference_api_key']
+#gemini_api_key = st.secrets['gemini_api_key']
+#inference_api_key = st.secrets['inference_api_key']
 
 def create_db():
     embedding = HuggingFaceInferenceAPIEmbeddings(
@@ -65,19 +66,20 @@ vectorStore = create_db()
 chain = create_chain(vectorStore)
 
 st.set_page_config(page_title="JamiaGPT", page_icon="src/images/icon.jpg")
+st.logo("src/images/JamiaGPT-removebg-preview.png")
 
 st.markdown('''
+<html>
+    <footer class="bottom-element">
+        <p style="text-align:center; font-size: 12px; color: #808080;">Made with ❤️ by <a href="https://github.com/confused-soul" target="_blank">confused-soul</a></p>
+    </footer>
+</html>
 <style>
     .e1nzilvr1, .e1vs0wn31 {display:none}
     #jamiagpt {padding: 0}
+    .eczjsme7 {height: 40px}
 </style>
 ''', unsafe_allow_html=True)
-
-col1, mid, col2 = st.columns([1,1,20])
-with col1:
-    st.image(image="src/images/logo.png", width=60)
-with col2:
-    st.title(":green[JamiaGPT]")
 
 disc = st.expander(label=":red[Disclaimer!]")
 disc.write("This is still under development. The model is not perfect and may give irrelevant answers. Please be patient and ask questions related to Jamia Millia Islamia only.")
