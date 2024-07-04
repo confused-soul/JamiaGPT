@@ -3,6 +3,10 @@
 JamiaGPT is a web-based chat application powered by AI, designed to provide information and engage in roleplay conversations related to Jamia Millia Islamia.
 [🔗JamiaGPT](https://jamiagpt.streamlit.app/)
 
+## Working Video
+
+<iframe src="https://drive.google.com/file/d/1m80Bj13fjiuJ9SfgRy6I7E6wrmIyG6UG/view?usp=sharing" width="640" height="480" allow="autoplay"></iframe>
+
 ## Screenshots
 
 <p align="center">
