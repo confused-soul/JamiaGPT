@@ -35,7 +35,7 @@ JamiaGPT is a web-based chat application powered by AI, designed to provide info
 - **Python Libraries:** Includes some Langchain libraries for data storage, management, and manipulation.
 
 <p align="center">
-  <img src="src/images/RAG Model.png" width="550" title="RAG Model" alt="[RAG Model](src/images/RAG Model.png?raw=true)">
+  <img src="src/images/RAG-Model.jpg" width="550" title="RAG Model" alt="[RAG Model](src/images/RAG-Model.jpg?raw=true)">
 </p>
 
 ## Setup Instructions
