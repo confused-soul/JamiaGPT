@@ -29,10 +29,10 @@ JamiaGPT is a web-based chat application powered by AI, designed to provide info
 
 - **Streamlit:** Web framework for creating interactive web applications with Python.
 - **LangChain:** Library for building AI chat applications, incorporating:
-  - **GoogleGenerativeAI:** For generating AI responses.
-  - **HuggingFace Transformers:** Used for embeddings and inference.
-  - **FAISS:** Fast similarity search for handling document retrieval.
-- **Python Libraries:** Including shelve for data storage.
+  - **GoogleGenerativeAI:** For generating AI responses. LLM used : gemini-1.5-flash
+  - **HuggingFace Transformers:** Used for embeddings and inference. Embedding Model used : all-MiniLM-l6-v2
+  - **FAISS:** (Facebook AI Similarity Search) is a library for fast similarity search from the Vector Database and handling document retrieval.
+- **Python Libraries:** Includes some Langchain libraries for data storage, management, and manipulation.
 
 ## Setup Instructions
 
